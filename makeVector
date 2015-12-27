@@ -1,0 +1,28 @@
+MakeVector
+
+get <- function() x
+a <- makeVector (c(8,1,5,2,9))
+a$get()
+set <- function(y) {
+    x <<- y
+    m <<- NULL
+
+}
+
+## changed vector to test set
+
+a$set(c(5,4,3,2,1))
+a$get()
+
+## used old vector
+
+a <- makeVector (c(8,1,5,2,9))
+setmean <- function(mean) m <<- mean
+getmean <- function() m
+a$setmean(25)
+a$getmean()
+[1] 25
+
+list(set=set, get=get,
+setmean=setmean,
+getmean=getmean)
